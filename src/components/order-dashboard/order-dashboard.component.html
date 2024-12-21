@@ -1,0 +1,25 @@
+<app-page-layout [title]="'Group Order Dashboard'">
+    <div class="container" content-container>
+        <div class="information">
+            <div class="form-group">
+                <label>
+                    Group Order Id
+                </label>
+                <input [value] = "id" readonly class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Expected Delivery Time</label>
+                <input  readonly class="form-control" [value]= "deliveryTime ? deliveryTime : 'Not Specified'">
+            </div>
+        </div>
+        <div class="user-list">
+            <h6>Member Orders </h6> 
+            <div class="list-group">
+                <div class="list-group-item">
+                    {{username}}
+                    <a class="active" [routerLink]="['/individual-order', deliveryTime]" routerLinkActive="router-link-active">Complete individual order</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-page-layout>

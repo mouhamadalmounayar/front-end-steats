@@ -1,0 +1,17 @@
+.menu-items-container{
+    width: 60%;
+    display: flex;
+}
+
+.menu-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

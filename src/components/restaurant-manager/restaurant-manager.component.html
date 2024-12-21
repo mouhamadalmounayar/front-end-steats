@@ -1,0 +1,17 @@
+<app-page-layout [title] = "'Search for a restaurant'">
+    <div class="content-container" content-container>
+        <div class="form-floating mb-3">
+            <input [(ngModel)]="restaurantName" (ngModelChange)="onRestaurantNameChange()" class="form-control" id="floatingInput" placeholder="Search for a restaurant">
+            <label for="floatingInput">Search for a restaurant</label>
+          </div>
+        <div class="container">
+            <div  *ngFor="let restaurant of this.filteredRestaurants" class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{restaurant.name}}</h5>
+                    <p class="card-text">{{restaurant.address}}</p>
+                    <button [routerLink]="['/menu', restaurant.name]" routerLinkActive="router-link-active"  class="btn btn-primary">See menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-page-layout>

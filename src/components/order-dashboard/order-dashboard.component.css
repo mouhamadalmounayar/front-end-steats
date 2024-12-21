@@ -1,0 +1,27 @@
+.information{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.list-group-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
+
+.user-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+

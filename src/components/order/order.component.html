@@ -1,0 +1,19 @@
+<app-page-layout [title]="'Create Group Order'">
+    <div class="container" content-container>
+        <div class="form-group">
+            <label for = "deliveryLocation"> Delivery Location </label>
+            <select [(ngModel)]="deliveryLocation" class="form-control">
+                <option selected> Choose </option>
+                <option> KAFETTE </option>
+                <option> AMPHI_F </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for = "deliveryTime"> Delivery Time </label>
+            <input class="form-control" type="datetime-local" placeholder="Delivery Time" [(ngModel)] = "deliveryTime">
+        </div>
+        <div class="submit" (click)="submit()">
+            <button class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</app-page-layout>
